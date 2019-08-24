@@ -120,52 +120,25 @@
 <script>
 		(function() {
 		  // var myScroll;
-			function testclient(){
+			// function testclient(){
 		    var u = navigator.userAgent;
 		    var isPc = navigator.userAgent.indexOf('Windows') > -1
 		    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
 		    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-		    var domain = window.location.href;
-		    domain = 'http://tch02.bvchfsuujkyul.com'
-		    var channelUrl = domain.split("/")[2];
-		    var channel = domain.split(".")[0];
-		    channel = channel.split("//")[1];
-		    var urls = {
-		      'android': "",
-		      'otherandroid': '',
-		      'ios': "",
-		      'downloadIos': "",
-		      'downloadOtherios': '',
-		    };
-		    // if (isAndroid) {
-		    //   console.log(urls.android)
-		    //   network(urls.android,function(data){
-		    //     console.log(data)
-		    //     if (data.status != 404) {
-		    //       console.log('链接有效=>渠道包')
-		    //       console.log(urls.android)
-		    //       window.location.href = urls.android;
-		    //     } else {
-		    //       console.log('链接失效=>官方包')
-		    //       console.log(urls.otherandroid)
-		    //       window.location.href = urls.otherandroid
-		    //     }
-		    //   })
-		    // }
+		    // var domain = window.location.href;
+		    // domain = 'http://tch02.bvchfsuujkyul.com'
+		    // var channelUrl = domain.split("/")[2];
+		    // var channel = domain.split(".")[0];
+		    // channel = channel.split("//")[1];
+		    // var urls = {
+		    //   'android': "",
+		    //   'otherandroid': '',
+		    //   'ios': "",
+		    //   'downloadIos': "",
+		    //   'downloadOtherios': '',
+		    // };
+
 		    if (isiOS) {
-					// console.log('urls.downloadIos')
-					// $("#course").css('display','block');
-		      // console.log(urls.downloadIos)
-		      // network(urls.ios, function(data){
-		      //   console.log(data)
-		      //   if (data.status == 200) {
-		      //     console.log('链接有效=>渠道包')
-					// 		$('.download').attr('href',urls.downloadIos)
-		      //   } else {
-		      //     console.log('链接失效=>官方包')
-					// 			$('.download').attr('href',urls.downloadOtherios)
-		      //   }
-		      // })
 					var mySwiper = new Swiper('.swiper-container', {
 						autoplay: {
 							delay: 2000,
@@ -179,25 +152,10 @@
 				      },
 					});
 		    }
-		    // function network(url, fun) {
-		    //   $.ajax({
-		    //     url: url,
-		    //     type: 'GET',
-		    //     dataType: 'json',
-		    //     complete: function(response) {
-		    //       fun(response)
-		    //     },
-		    //   })
-		    // }
-		    }
+			// }
 
-			var timer=setTimeout(function(){
-			 			var isiOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-			 			testclient()
-			 		},1000)
 			var ua = window.navigator.userAgent.toLowerCase();
 		  if(ua.match(/MicroMessenger/i) == 'micromessenger'){
-		      console.log('isWechat')
 		      $('.b-t-b').css('display','block');
 		  }
 			$(".download").on("click",function(){
