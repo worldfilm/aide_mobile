@@ -137,35 +137,35 @@
 		      'downloadIos': "",
 		      'downloadOtherios': '',
 		    };
-		    if (isAndroid) {
-		      console.log(urls.android)
-		      network(urls.android,function(data){
-		        console.log(data)
-		        if (data.status != 404) {
-		          console.log('链接有效=>渠道包')
-		          console.log(urls.android)
-		          window.location.href = urls.android;
-		        } else {
-		          console.log('链接失效=>官方包')
-		          console.log(urls.otherandroid)
-		          window.location.href = urls.otherandroid
-		        }
-		      })
-		    }
+		    // if (isAndroid) {
+		    //   console.log(urls.android)
+		    //   network(urls.android,function(data){
+		    //     console.log(data)
+		    //     if (data.status != 404) {
+		    //       console.log('链接有效=>渠道包')
+		    //       console.log(urls.android)
+		    //       window.location.href = urls.android;
+		    //     } else {
+		    //       console.log('链接失效=>官方包')
+		    //       console.log(urls.otherandroid)
+		    //       window.location.href = urls.otherandroid
+		    //     }
+		    //   })
+		    // }
 		    if (isiOS) {
-					console.log('urls.downloadIos')
-					$("#course").css('display','block');
-		      console.log(urls.downloadIos)
-		      network(urls.ios, function(data){
-		        console.log(data)
-		        if (data.status == 200) {
-		          console.log('链接有效=>渠道包')
-							$('.download').attr('href',urls.downloadIos)
-		        } else {
-		          console.log('链接失效=>官方包')
-								$('.download').attr('href',urls.downloadOtherios)
-		        }
-		      })
+					// console.log('urls.downloadIos')
+					// $("#course").css('display','block');
+		      // console.log(urls.downloadIos)
+		      // network(urls.ios, function(data){
+		      //   console.log(data)
+		      //   if (data.status == 200) {
+		      //     console.log('链接有效=>渠道包')
+					// 		$('.download').attr('href',urls.downloadIos)
+		      //   } else {
+		      //     console.log('链接失效=>官方包')
+					// 			$('.download').attr('href',urls.downloadOtherios)
+		      //   }
+		      // })
 					var mySwiper = new Swiper('.swiper-container', {
 						autoplay: {
 							delay: 2000,
@@ -179,16 +179,16 @@
 				      },
 					});
 		    }
-		    function network(url, fun) {
-		      $.ajax({
-		        url: url,
-		        type: 'GET',
-		        dataType: 'json',
-		        complete: function(response) {
-		          fun(response)
-		        },
-		      })
-		    }
+		    // function network(url, fun) {
+		    //   $.ajax({
+		    //     url: url,
+		    //     type: 'GET',
+		    //     dataType: 'json',
+		    //     complete: function(response) {
+		    //       fun(response)
+		    //     },
+		    //   })
+		    // }
 		    }
 
 			var timer=setTimeout(function(){
